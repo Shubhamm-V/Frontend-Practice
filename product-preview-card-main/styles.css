@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 95vh;
+    display: grid;
+    place-items: center;
+    background-color:  hsl(30, 38%, 92%);
+}
+
+.container{
+    display:  flex;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow:  1px 1px hsl(212, 45%, 89%), 0 2px 1px hsl(220, 15%, 55%);
+    border-radius: 10px;
+}
+
+.productImage{
+    max-width: 280px;
+}
+.information{
+    max-width: 280px;
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.category, .description {
+    font-family: "Montserrat";
+    font-weight: 200;
+    color: hsl(228, 12%, 48%);
+}
+.description{
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+.title{
+    font-family: "Fraunces";
+    color: hsl(212, 21%, 14%);
+}
+.price{
+    font-family: "Fraunces";
+   color:  hsl(158, 36%, 37%)
+}
+
+.price > span {
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat";
+    font-size: 0.8rem;
+    padding-left: 1rem;
+}
+
+.information > button{
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    padding: 0.6rem 1.2rem;
+    border: 1px solid hsl(158, 36%, 37%);
+    width: 96%;
+    margin: 0 auto;
+    font-family: "Montserrat";
+    cursor: pointer;
+    border-radius: 5px;
+}
+.information > button:hover{
+    background-color: hsl(158, 66%, 17%);
+}
+.information > button > img{
+   padding-right: 1rem; 
+   height: 60%;
+}
+
+
+@media (max-width: 455px){
+    .container{
+        flex-direction: column;
+    }
+    .productImage{
+        content: url('./images/image-product-mobile.jpg');
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .information{
+        max-width: 100%;
+    }
+}
